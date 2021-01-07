@@ -1,17 +1,17 @@
 // array: library
 
-let mylibrary = [];
+let myLibrary = [];
 
 // permanent members of the library
 
 const b1 = new Book('The Hobbit', 'J.R.R. Tolkien', '1937');
-mylibrary.push(b1);
+myLibrary.push(b1);
 
 const b2 = new Book('Moby Dick', 'Herman Melville', '1851');
-mylibrary.push(b2);
+myLibrary.push(b2);
 
 const b3 = new Book('War and Peace', 'Leo Tolstoy', '1869');
-mylibrary.push(b3);
+myLibrary.push(b3);
 
 // constructor: for books
 
@@ -28,13 +28,13 @@ function Book(title, author, year){
 // function: prints books in myLibrary to page
 
 function printBooksToPage(){
-    for (let i=0; i<mylibrary.length; i++){
+    for (let i=0; i<myLibrary.length; i++){
         
         let div = document.createElement('div');
         div.setAttribute('id', i)
         
         let p = document.createElement('p');
-        p.textContent = mylibrary[i].info();
+        p.textContent = myLibrary[i].info();
 
         let chkbox = document.createElement('input');
         chkbox.setAttribute('type', 'checkbox');
@@ -45,7 +45,7 @@ function printBooksToPage(){
         label.setAttribute('for', 'checkbox');
         label.textContent = 'Read';
 
-        if (mylibrary[i].read === true){
+        if (myLibrary[i].read === true){
             chkbox.checked = true;
         }
 
@@ -66,16 +66,16 @@ printBooksToPage();
 
 function read(x){
     if (x.currentTarget.checked === true){
-        mylibrary[x.currentTarget.parentNode.id].read = true;
+        myLibrary[x.currentTarget.parentNode.id].read = true;
     }
     else {
-        mylibrary[x.currentTarget.parentNode.id].read = false;
+        myLibrary[x.currentTarget.parentNode.id].read = false;
     }
 }
 // function delete book
 
 function delBook(x){
-    mylibrary.splice(x.currentTarget.parentNode.id, 1)
+    myLibrary.splice(x.currentTarget.parentNode.id, 1)
     let arr1 = document.getElementById('library').childNodes;
     while (arr1[0]){
         document.getElementById('library').removeChild(arr1[0])
@@ -154,7 +154,7 @@ function submit(){
     book.title = document.getElementById('title').value;
     book.author = document.getElementById('author').value;
     book.year = document.getElementById('year').value;
-    mylibrary.push(book);
+    myLibrary.push(book);
 
     let arr1 = document.getElementById('library').childNodes;
     while (arr1[0]){

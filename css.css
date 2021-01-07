@@ -1,0 +1,59 @@
+body {
+    background-color: gray;
+    font-family: 'Courier New', Courier, monospace;
+}
+button {
+    font-family: 'Courier New', Courier, monospace;
+}
+#header {
+    display: flex;
+    justify-content: center;
+}
+#library-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: blue solid 1px; */
+}
+#library {
+    width: 40rem;
+    /* border: red solid 2px; */
+}
+#library div {
+    /* border: white dotted 1px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#library div input{
+    margin-left: auto;
+}
+#library div button{
+    margin-left: 1rem;
+    /* height: 2rem; */
+    padding: .5rem;
+}
+#form-container {
+    width: 40rem;
+    /* border: green solid 1px; */
+}
+#setForm {
+    margin-top: 5rem;
+    padding: .4rem;
+}
+#submit {
+    padding: .4rem;
+}
+#form {
+    width: 50%;
+    /* border: firebrick dotted 1px;    */
+}
+#form div {
+    /* border: yellow dotted 1px; */
+    display: flex;
+    padding-left: .4rem;
+}
+#form input {
+    margin-left: auto;
+}

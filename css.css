@@ -1,13 +1,21 @@
 body {
-    background-color: gray;
+    background-color: lightgray;
     font-family: 'Courier New', Courier, monospace;
+    color: darkslateblue;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 button {
     font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: 1em;
+    background-color: lightslateblue;
+    color: darkslateblue;
 }
 #header {
     display: flex;
     justify-content: center;
+    /* text-decoration: underline; */
 }
 #library-container {
     display: flex;
@@ -41,19 +49,23 @@ button {
 #setForm {
     margin-top: 5rem;
     padding: .4rem;
+    width: 100%;
 }
 #submit {
     padding: .4rem;
+    width: 100%;
 }
 #form {
-    width: 50%;
+    width: 100%;
     /* border: firebrick dotted 1px;    */
 }
 #form div {
     /* border: yellow dotted 1px; */
+    height: 2rem;
     display: flex;
     padding-left: .4rem;
 }
 #form input {
     margin-left: auto;
+    width: 80%;
 }

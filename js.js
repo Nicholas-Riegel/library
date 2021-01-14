@@ -1,3 +1,16 @@
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyCiFnppJC_34F0313N_afFNd54BkuDb78Y",
+    authDomain: "library-7718f.firebaseapp.com",
+    projectId: "library-7718f",
+    storageBucket: "library-7718f.appspot.com",
+    messagingSenderId: "487388271156",
+    appId: "1:487388271156:web:cc36089b13c31c72477061"
+  };
+// Initialize Firebase
+
+firebase.initializeApp(firebaseConfig);
+
 // array: library
 
 let myLibrary = [];
@@ -45,10 +58,6 @@ function printBooksToPage(){
         label.setAttribute('for', 'checkbox');
         label.textContent = 'Read';
 
-        if (myLibrary[i].read === true){
-            chkbox.checked = true;
-        }
-
         let btn = document.createElement('button');
         btn.textContent = 'Delete';
         btn.addEventListener('click', delBook)
@@ -72,6 +81,7 @@ function read(x){
         myLibrary[x.currentTarget.parentNode.id].read = false;
     }
 }
+
 // function delete book
 
 function delBook(x){

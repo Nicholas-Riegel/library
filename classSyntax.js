@@ -4,6 +4,20 @@
 
 let myLibrary = [];
 
+// constructor: for books
+
+class Book {
+    constructor(title, author, year){
+    this.title = title;
+    this.author = author;
+    this.year = year;
+    this.read = false;
+    }
+    info(){
+        return this.title + ", "+this.author+", "+this.year+".";
+    }
+}
+
 // permanent members of the library
 
 const b1 = new Book('The Hobbit', 'J.R.R. Tolkien', '1937');
@@ -14,18 +28,6 @@ myLibrary.push(b2);
 
 const b3 = new Book('War and Peace', 'Leo Tolstoy', '1869');
 myLibrary.push(b3);
-
-// constructor: for books
-
-function Book(title, author, year){
-    this.title = title;
-    this.author = author;
-    this.year = year;
-    this.read = false;
-    this.info = function(){
-        return this.title + ", "+this.author+", "+this.year+".";
-    }
-}
 
 // function: prints books in myLibrary to page
 

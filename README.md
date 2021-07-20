@@ -1,6 +1,6 @@
 # Library
 
-Personal Library project. 
+Personal Library project in pure JS. 
 
 Uses constructor functions
 
